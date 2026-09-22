@@ -1,39 +1,74 @@
-Indonesia Earthquake Monitor
-Interactive dashboard untuk melihat dan menganalisis data gempa BMKG.
-Project
-	
-Source	BMKG
-Language	Python
-Dashboard	Streamlit
-Data	Earthquake records
-Visualization	Plotly, PyDeck
-Deployment	Streamlit Cloud
+# Indonesia Earthquake Monitor
 
+Interactive dashboard untuk melihat dan menganalisis data gempa bumi berdasarkan data BMKG.
 
-Alur pengerjaan
-BMKG Data
-   ↓
-Requests
-   ↓
-Pandas
-   ↓
-Cleaning & Processing
-   ↓
-Analysis
-   ↓
-Charts + Map
-   ↓
-Streamlit Dashboard
-Yang dianalisis
+## Project Overview
+
+| | |
+|---|---|
+| **Data Source** | BMKG |
+| **Language** | Python |
+| **Dashboard** | Streamlit |
+| **Data Processing** | Pandas, NumPy |
+| **Visualization** | Plotly, PyDeck |
+| **API Request** | Requests |
+| **Deployment** | Streamlit Community Cloud |
+
+## Tujuan
+
+Project ini dibuat untuk mengolah data gempa BMKG menjadi dashboard yang lebih mudah digunakan untuk melihat aktivitas gempa berdasarkan waktu, magnitude, kedalaman, wilayah, dan lokasi.
+
+## Data Workflow
+
+**BMKG → Data Collection → Data Cleaning → Data Processing → Analysis → Visualization → Dashboard**
+
+## Analisis
+
+Dashboard menyediakan beberapa analisis:
+
 - Jumlah gempa berdasarkan waktu
 - Distribusi magnitude
-- Kedalaman gempa
+- Distribusi kedalaman
 - Aktivitas berdasarkan wilayah
 - Lokasi gempa pada peta
 - Status tsunami
-Dashboard
-Filter → Map → Charts → Data Table
-Pengguna bisa memilih periode, magnitude minimum, wilayah, dan status tsunami untuk melihat data yang sesuai.
-Hasil
-Data gempa yang awalnya berupa data mentah BMKG diubah menjadi dashboard interaktif yang bisa digunakan untuk eksplorasi data tanpa perlu membuka atau menjalankan kode Python.
-Stack: Python · Pandas · NumPy · Requests · Plotly · PyDeck · Streamlit · GitHub
+
+## Dashboard
+
+Dashboard dilengkapi dengan:
+
+- Filter tanggal
+- Filter minimum magnitude
+- Filter wilayah
+- Filter status tsunami
+- Interactive earthquake map
+- Charts
+- Data table
+
+## Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Requests
+- Plotly
+- PyDeck
+- Streamlit
+
+## Project Structure
+
+```text
+indonesia-earthquake-monitor/
+├── app.py
+├── requirements.txt
+├── README.md
+├── data/
+├── src/
+│   ├── bmkg_api.py
+│   ├── data_processing.py
+│   ├── analysis.py
+│   ├── charts.py
+│   ├── map.py
+│   └── ui.py
+└── .streamlit/
+    └── config.toml
